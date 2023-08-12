@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package aiProcessor;
+
+enum LLMProviders {
+    OPENAI = 0;
+    PALM = 1;    
+}
+
+message ChatContextItem {
+    string uuid = 1;
+    string content = 2;
+    string role = 3;
+}
+
+message MessageRequest {
+    string uuid = 1;
+    LLMProviders provider = 2;
+    repeated ChatContextItem context = 3;
+}
+
+message MessageResponse {
+    string uuid = 1;
+    string message = 2;
+}
+
+service MessageProcessor {
+    rpc ProcessMessage(MessageRequest) returns (MessageResponse) {}
+}
