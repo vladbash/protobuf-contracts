@@ -6,7 +6,7 @@ export interface ServerDefinition extends grpc.GrpcObject {
 
 export interface ServerPackage extends grpc.GrpcObject {
     [name: string]: {
-        [name: string]: ServerDefinition
+        [name: string]: ServerDefinition 
     }
 }
 
