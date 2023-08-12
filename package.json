@@ -2,7 +2,7 @@
   "name": "protobuf-contracts",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "ls": "buf ls-files",
     "generate": "buf generate",
